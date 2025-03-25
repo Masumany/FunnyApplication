@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/background5">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+           <TextView
+               android:id="@+id/back"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:text="返回"
+               android:textSize="20dp"
+               android:textColor="#755BA2"
+               android:background="#DED5EF"/>
+
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/searchView"
+                android:queryHint="请输入要查询的星座(英文)"
+                />
+
+            <TextView
+                android:id="@+id/constellation_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/today_fortune_all_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:textColor="#323547"
+                />
+
+            <TextView
+                android:id="@+id/today_fortune_love_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:textColor="#7F5244"
+                />
+
+            <TextView
+                android:id="@+id/today_fortune_work_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:textColor="#374593"
+                />
+
+            <TextView
+                android:id="@+id/today_fortune_money_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:textColor="#776F21"
+                />
+
+            <TextView
+                android:id="@+id/today_fortune_health_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="#4C6F4E"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
