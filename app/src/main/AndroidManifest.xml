@@ -32,6 +32,7 @@
         <activity android:name=".HeartActivity"></activity>
         <activity android:name=".HistoryActivity"></activity>
         <activity android:name=".StarActivity"></activity>
+        <activity android:name=".HistoryContentActivity"></activity>
     </application>
 
 

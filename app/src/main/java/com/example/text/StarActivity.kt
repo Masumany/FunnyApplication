@@ -47,13 +47,13 @@ class StarActivity : AppCompatActivity() {
         // 初始请求
         performSearch(STAR_SIGN)
 
-        backTextView.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(p0: View?) {
+        backTextView.setOnClickListener{
+
               val intent=Intent(this@StarActivity,MainActivity::class.java)
                 startActivity(intent)
-            }
 
-        })
+
+        }
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -89,7 +89,7 @@ class StarActivity : AppCompatActivity() {
             override fun onResponse(call: Call, response: Response) {
                 if (response.isSuccessful) {
                     val responseData = response.body?.string()
-                    Log.d("API_RESPONSE", "Raw Response Data: $responseData")
+                    Log.d("API_RE   SPONSE", "Raw Response Data: $responseData")
                     val gson = Gson()
                     val starFortune = gson.fromJson(responseData, StarFortune::class.java)
 
