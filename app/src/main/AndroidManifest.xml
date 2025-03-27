@@ -33,6 +33,8 @@
         <activity android:name=".HistoryActivity"></activity>
         <activity android:name=".StarActivity"></activity>
         <activity android:name=".HistoryContentActivity"></activity>
+        <activity android:name=".CheckActivity"></activity>
+        <activity android:name=".MineActivity"></activity>
     </application>
 
 

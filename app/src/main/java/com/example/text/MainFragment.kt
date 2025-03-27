@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 
-class MainFragment : Fragment() {
+open class MainFragment : Fragment() {
     private lateinit var cardview1: CardView
     private lateinit var cardview2: CardView
     private lateinit var cardview3: CardView
