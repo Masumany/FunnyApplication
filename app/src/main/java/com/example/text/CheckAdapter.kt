@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CheckAdapter(private val dataList: List<data>) :
+class CheckAdapter(private var dataList: List<data>) :
         RecyclerView.Adapter<CheckAdapter.CheckViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -36,5 +36,10 @@ class CheckAdapter(private val dataList: List<data>) :
 
     override fun getItemCount(): Int {
        return dataList.size
+    }
+
+    fun updateData(newData: List<data>) {
+        dataList = newData
+        notifyDataSetChanged()
     }
 }
