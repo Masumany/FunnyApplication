@@ -6,6 +6,8 @@ data class CheckFortune (
 data class data (
     val hot_word:String? = null,
     val url:String? = null,
-)
+) {
+
+}
 
 

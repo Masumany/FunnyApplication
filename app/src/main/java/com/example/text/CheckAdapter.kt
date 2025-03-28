@@ -23,7 +23,7 @@ class CheckAdapter(private val dataList: List<data>) :
         holder.titleTextView.text = data.hot_word
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, CheckContentActivity::class.java)
-            intent.putExtra("data", data.url)
+            intent.putExtra("url", data.url)
             holder.itemView.context.startActivity(intent)
         }
     }
