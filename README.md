@@ -1,0 +1,6 @@
+随便写的一个好玩的app
+使用MVVM框架和不同有趣的接口，采用Kotlin来写
+首次尝试用CardView，更加熟练地掌握了LinearLayout布局，同时也发现了许多之前没有发现的属性
+再次使用swiperefreshlayout和floatingactionbutton，掌握更加熟练
+网络解析首次使用密钥的api或需要keyword的api，对网络解析更加熟练
+功能比较简陋，后续会不断添加更多好玩的接口及功能
