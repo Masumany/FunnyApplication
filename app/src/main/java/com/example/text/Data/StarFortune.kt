@@ -1,4 +1,4 @@
-package com.example.text
+package com.example.text.Data
 
 data class StarFortune(
     val request_id: String,

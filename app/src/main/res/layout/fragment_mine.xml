@@ -36,6 +36,25 @@
         android:textColor="#808AC5"
         android:gravity="center"/>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#F0F1F6"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        >
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提出意见"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="#808AC5"/>
+    </androidx.cardview.widget.CardView>
+
+
 
 
 

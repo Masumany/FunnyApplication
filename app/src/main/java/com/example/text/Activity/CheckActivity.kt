@@ -1,19 +1,26 @@
-package com.example.text
+package com.example.text.Activity
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import com.example.text.Fragment.CheckFragment
+import com.example.text.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class CheckActivity : AppCompatActivity() {
 
     private lateinit var navigationButton: BottomNavigationView
+    private lateinit var checkViewModel: CheckViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_check)
-        val checkFragment= CheckFragment()
+
+        checkViewModel = ViewModelProvider(this).get(CheckViewModel::class.java)
+
+        val checkFragment = CheckFragment()
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.container, checkFragment)
@@ -22,24 +29,17 @@ class CheckActivity : AppCompatActivity() {
         navigationButton = findViewById(R.id.bottom_navigation)
 
         navigationButton.setOnNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.menu_item_main -> {
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
-                R.id.menu_item_check -> {
+            checkViewModel.onNavigationItemSelected(item.itemId)
+            true
+        }
 
-                    true
-                }
-                R.id.menu_item_mine -> {
-                    val intent = Intent(this, MineActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
-                else -> false
+        checkViewModel.navigationEvent.observe(this, Observer { targetClass ->
+            if (targetClass != null) {
+                val intent = Intent(this, targetClass)
+                startActivity(intent)
             }
-        }
-           navigationButton.selectedItemId =   R.id.menu_item_check
-        }
+        })
+
+        navigationButton.selectedItemId = R.id.menu_item_check
     }
+}
